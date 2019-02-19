@@ -1,26 +1,17 @@
-/* sirin-stencil-regular - latin */
 @font-face {
-  font-family: 'Sirin Stencil';
-  font-style: normal;
-  font-weight: 400;
-  src: local('SirinStencil'), local('SirinStencil-Regular'),
-       url('../fonts/sirin-stencil-v7-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('../fonts/sirin-stencil-v7-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-
-/* dancing-script-regular - latin */
-@font-face {
-  font-family: 'Dancing Script';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Dancing Script Regular'), local('DancingScript-Regular'),
-       url('../fonts/dancing-script-v9-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('../fonts/dancing-script-v9-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  font-family: 'Inter';
+  font-style:  normal;
+  font-weight: 600;
+  src: url("../fonts/inter-3.3/Inter-SemiBold.woff2") format("woff2"),
+       url("../fonts/inter-3.3/") format("woff");
 }
 
 html {
   background-color: rgb(255, 255, 255);
-  font-size: 14px;
+  background: linear-gradient(to right top, rgb(27, 147, 210), rgb(5, 111, 168));
+  font-size: 16px;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
 }
 
 body {
@@ -38,30 +29,29 @@ header {
 }
 
 h1 {
-  font-size: calc(12rem + 8vw);
-  font-family: "Sirin Stencil";
+  font-size: calc(6rem + 10vw);
+  font-family: "Inter", Helvetica, Arial;
   font-weight: 300;
   align-content: center;
   margin: 0;
-  color: rgb(0, 133, 61);
+  padding: 0.1em 0.3em;
+  background-color: rgba(0, 0, 0, 0.1);
+  transition: 1s all;
+}
+
+h1:hover {
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 p {
   margin: 0;
 }
 
-a {
-  text-decoration: none;
-  color: rgb(50, 50, 50);
-  border-bottom: 3px solid rgba(100, 100, 100, 0.1);
-
-}
 a:hover {
   background-color: rgba(100, 100, 100, 0.1);
 }
 
 footer {
-  font-size: 0.75rem;
-  color: rgb(50, 50, 50);
+  font-size: 0.8rem;
   text-align: center;
 }
