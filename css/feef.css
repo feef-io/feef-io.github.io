@@ -11,7 +11,7 @@ html {
   background: linear-gradient(to right top, rgb(27, 147, 210), rgb(5, 111, 168));
   font-size: 16px;
   color: rgb(255, 255, 255);
-  cursor: pointer;
+  cursor: default;
 }
 
 body {
