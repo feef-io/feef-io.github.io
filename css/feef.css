@@ -18,45 +18,51 @@ body {
   background: linear-gradient(to right top, rgb(27, 147, 210), rgb(5, 111, 168));
   margin: 0;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    "header"
+    "footer";
+  justify-items: center;
   align-items: center;
-  justify-content: space-around;
   font-family: Menlo, Consolas, "Courier New", monospace;
   animation: 90s ease-in-out infinite alternate circadian;
 }
 
 header {
+  grid-area: header;
+  animation: 1s ease-in-out fade-in;
+}
+
+footer {
+  grid-area: footer;
+  align-self: end;
+  font-size: 0.8rem;
+  line-height: 1.3rem;
   text-align: center;
+  margin: 1rem;
+  color: rgba(255, 255, 255, 0.5);
+  animation: 1s ease-in-out fade-in;
 }
 
 h1 {
   font-size: calc(6rem + 10vw);
   font-family: "Inter", Helvetica, Arial;
   font-weight: 300;
-  align-content: center;
   margin: 0;
   padding: 0.1em 0.3em;
   background-color: rgba(0, 0, 0, 0.1);
-  transition: 1s all;
-}
-
-h1:hover {
-  background-color: rgba(0, 0, 0, 0.3);
+  transition: .25s font-size background-color;
 }
 
 p {
-  margin: 0;
+  margin: 0.25em;
 }
 
 a:hover {
   background-color: rgba(100, 100, 100, 0.1);
 }
 
-footer {
-  font-size: 0.8rem;
-  text-align: center;
-}
 
 @keyframes circadian {
   from {
@@ -64,5 +70,17 @@ footer {
   }
   to {
     opacity: 0.15;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
