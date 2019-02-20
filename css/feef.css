@@ -40,7 +40,7 @@ footer {
   font-size: 0.8rem;
   line-height: 1.3rem;
   text-align: center;
-  margin: 1rem;
+  margin: 1rem 1rem 4rem;
   color: rgba(255, 255, 255, 0.5);
   animation: 1s ease-in-out fade-in;
 }
