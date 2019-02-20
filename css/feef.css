@@ -7,14 +7,15 @@
 }
 
 html {
+  background: linear-gradient(to right top, rgb(62, 62, 43), rgb(0, 0, 0));
   background-color: rgb(255, 255, 255);
-  background: linear-gradient(to right top, rgb(27, 147, 210), rgb(5, 111, 168));
   font-size: 16px;
   color: rgb(255, 255, 255);
   cursor: default;
 }
 
 body {
+  background: linear-gradient(to right top, rgb(27, 147, 210), rgb(5, 111, 168));
   margin: 0;
   min-height: 100vh;
   display: flex;
@@ -22,6 +23,7 @@ body {
   align-items: center;
   justify-content: space-around;
   font-family: Menlo, Consolas, "Courier New", monospace;
+  animation: 90s ease-in-out infinite alternate circadian;
 }
 
 header {
@@ -54,4 +56,13 @@ a:hover {
 footer {
   font-size: 0.8rem;
   text-align: center;
+}
+
+@keyframes circadian {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.15;
+  }
 }
